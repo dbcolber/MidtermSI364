@@ -1,0 +1,13 @@
+{% block content %}
+  <h1>Presidential Search Form</h1>
+  <form method="POST" action="http://localhost:5000/wikiresult">
+      {{ form.hidden_tag() }}
+      {% for message in get_flashed_messages() %}
+      {{ message }}
+      {% endfor %}
+      <p>{{ form.searchword.label }}{{ form.searchword() }}</p>
+      {{ form.submit() }}
+  </form>
+  <img src='http://assets.nydailynews.com/polopoly_fs/1.467331.1314620958!/img/httpImage/image.jpg_gen/derivatives/article_750/alg-new-mount-rushmore-jpg.jpg'>
+
+{% endblock %}
