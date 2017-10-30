@@ -1,0 +1,21 @@
+<h2>Full Wikipedia Text: </h2>
+	{{content}}
+
+<h2>Wikipedia Relevant Pages:</h2>
+
+{% if links %}
+<ul>
+	{% for cat in links %}
+		<li>
+		{{ cat }}</li>
+	{% endfor %}
+	<br>
+	
+</ul>
+
+{% else %}
+
+<h3> Oops! Try again</h3>
+<a href="http://localhost:5000/form">Back to Home Page</a>
+
+{% endif %}
